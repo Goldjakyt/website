@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("Gilroy-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    font-family: "Gilroy";
+    background-color: hsl(252, 6%, 17%);
+    color: hsl(0, 0%, 100%);
+    overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    background-image: url(background-net_main.svg);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-main {
+    animation: logo-transformY_opacity 1.3s ease-in-out;
+    z-index: 2;
+}
+
+@media screen and (max-width: 344px) {
+    .logo-main {
+        width: 273px;
+        height: 74px;
+    }
+}
+
+@keyframes logo-transformY_opacity {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.contact {
+    background-color: hsl(233, 18%, 18%);
+    border: 1px solid hsl(0, 0%, 100%, .15);
+    width: 280px;
+    padding: 12.5px 15px;
+    border-radius: 20px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease-in-out;
+    animation: contact-transformY_opacity 1s ease-in-out;
+    z-index: 2;
+}
+
+.contact:hover {
+    background-color: hsl(233, 6%, 28%);
+}
+
+@keyframes contact-transformY_opacity {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.contact-box_social {
+    background-color: hsl(226, 100%, 59%);
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box_account {
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.contact-box_account > img {
+    width: 31px;
+    height: 31px;
+    margin-right: 10px;
+}
+
+.contact-box_account > h4 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.elipse {
+    display: inline-block;
+    background-color: hsl(226, 100%, 59%, 0.5);
+    filter: blur(250px);
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    bottom: -100px;
+    animation: elipse-transformY_opacity 0.5s ease-in-out, elipse-scale 7s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes elipse-scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes elipse-transformY_opacity {
+    from {
+        bottom: -200px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: -100px;
+        opacity: 1;
+    }
+}
